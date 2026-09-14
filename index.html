@@ -99,29 +99,74 @@
   </section>
 
   <!-- Featured Products -->
-  <section class="featured container">
-    <h1 class="section-title">Featured Fireworks</h1>
-    <div class="featured-grid">
-      <div class="featured-card">
-        <img src="skyshot.png" alt="Sky Shots">
-        <h2>Sky Shots</h2>
-        <p>Light up the night sky with dazzling aerial fireworks.</p>
-        <a href="products.html" class="primary-button">Explore</a>
+<section class="featured container">
+  <h1 class="section-title">Featured Fireworks</h1>
+
+  <div class="featured-grid">
+
+    <!-- Sky Shots -->
+    <div class="featured-card">
+      <span class="offer-tag">OFFER</span>
+
+      <img src="skyshot.png" alt="Sky Shots">
+
+      <h2>Sky Shots</h2>
+
+      <p>Light up the night sky with dazzling aerial fireworks.</p>
+
+      <div class="price">
+        <span class="old-price">₹1,200</span>
+        <span class="new-price">₹799</span>
       </div>
-      <div class="featured-card">
-        <img src="flowerpot.jpeg" alt="Flower Pots">
-        <h2>Flower Pots</h2>
-        <p>Classic ground fireworks with bright sparks.</p>
-        <a href="products.html" class="primary-button">Explore</a>
-      </div>
-      <div class="featured-card">
-        <img src="combo.png" alt="Combo Pack">
-        <h2>Combo Pack</h2>
-        <p>Handpicked family packs for every celebration.</p>
-        <a href="combos.html" class="primary-button">Explore</a>
-      </div>
+
+      <a href="products.html" class="cart-button" aria-label="Add Sky Shots to cart">
+  🛒
+</a>
     </div>
-  </section>
+
+
+    <!-- Flower Pots -->
+    <div class="featured-card">
+      <span class="offer-tag">OFFER</span>
+
+      <img src="flowerpot.jpeg" alt="Flower Pots">
+
+      <h2>Flower Pots</h2>
+
+      <p>Classic ground fireworks with bright sparks.</p>
+
+      <div class="price">
+        <span class="old-price">₹800</span>
+        <span class="new-price">₹549</span>
+      </div>
+
+      <a href="products.html" class="cart-button" aria-label="Add Sky Shots to cart">
+  🛒
+</a>
+    </div>
+
+
+    <!-- Combo Pack -->
+    <div class="featured-card">
+      <span class="offer-tag">OFFER</span>
+
+      <img src="combo.png" alt="Combo Pack">
+
+      <h2>Combo Pack</h2>
+
+      <p>Handpicked family packs for every celebration.</p>
+
+      <div class="price">
+  <span class="old-price">₹1,200</span>
+  <span class="new-price">₹799</span>
+</div>
+
+<a href="products.html" class="cart-button" aria-label="Add Sky Shots to cart">
+  🛒
+</a>
+
+  </div>
+</section>
 
   <!-- Why Choose Us -->
   <section class="why-us container">
@@ -224,7 +269,12 @@
     </div>
     <p class="footer-bottom">© 2026 Kannan Crackers. All Rights Reserved.</p>
   </footer>
+  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
 
+<!-- Firework Animation -->
+<canvas id="fireworks-canvas"></canvas>
   <!-- Scripts -->
   <script src="script.js"></script>
 </body>
