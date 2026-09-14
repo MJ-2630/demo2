@@ -242,6 +242,7 @@ body {
   100% { transform: translateX(0%); }
 }
 
+
 /* Section Titles */
 .section-title {
   font-size: 36px;
@@ -368,28 +369,31 @@ body {
 
 /* Shopping cart */
 .cart-button {
-  width: 42px;
-  height: 42px;
-  margin: 5px auto 0;
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  background: #ff8a24;
-  color: white;
-  border-radius: 50%;
+  padding: 10px 20px;   /* space for text */
+  margin: 8px auto 0;
 
+  background: linear-gradient(135deg, #ff8a24, #ff4f8c);
+  color: #fff;
+  border-radius: 30px;  /* pill shape */
+  
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: bold;
 
-  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cart-button:hover {
-  transform: scale(1.12);
-  box-shadow: 0 0 15px rgba(255, 200, 100, 0.7);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 200, 100, 0.9);
 }
+
+
 
 /* Why Choose Us */
 .why-us {
@@ -430,7 +434,7 @@ body {
 .category-track {
   display: flex;
   gap: 20px;
-  animation: scrollCategories 20s linear infinite;
+  animation: scrollCategories 7s linear infinite;
 }
 .category-card {
   flex: 0 0 180px;
@@ -459,80 +463,169 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* Footer */
-.site-footer {
-  background: #0a1a33;
-  color: #fff;
-  padding: 30px 20px;
-  margin-top: 40px;
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #0a1a33;
+    color: #fff;
+    padding-top: 60px;
 }
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+
+
+/* Footer Container */
+
+.footer-container {
+    width: 88%;
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.3fr 1.5fr;
+
+    gap: 40px;
 }
-.footer-links a {
-  display: block;
-  color: #f7c95c;
-  text-decoration: none;
-  margin-bottom: 8px;
+
+
+/* Footer Box */
+
+.footer-box h3 {
+    color: #f79706;
+    font-size: 19px;
+    margin-bottom: 20px;
 }
-.footer-social a {
-  margin: 0 8px;
-  color: #ff8a24;
-  font-size: 20px;
-  transition: color 0.3s, transform 0.3s;
+
+.footer-box p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
-.footer-social a:hover {
-  color: #f7c95c;
-  transform: scale(1.2);
+
+
+/* =========================
+   FOOTER BRAND
+========================= */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
 }
+
+.footer-brand img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.footer-brand h2 {
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #d89b00;
+    padding-left: 5px;
+}
+
+
+/* =========================
+   MAP
+========================= */
+
 .footer-map iframe {
-  width: 100%;
-  border-radius: 10px;
+    width: 100%;
+    height: 200px;
+
+    border: none;
+    border-radius: 6px;
 }
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
 .footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ccc;
+    margin-top: 50px;
+
+    padding: 20px 5%;
+
+    text-align: center;
+
+    border-top: 1px solid #333;
 }
 
-/* Responsive Layouts */
-@media (max-width: 768px) {
-  .slide-content {
-    left: 5%;
-    font-size: 14px;
-  }
-  .slide-content h1 {
-    font-size: 32px;
-  }
-  .featured-grid,
-  .why-grid,
-  .product-grid,
-  .combo-grid,
-  .deal-grid,
-  .guide-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-grid {
-    flex-direction: column;
-  }
+.footer-bottom p {
+    color: #888;
+    font-size: 13px;
+    margin: 0;
 }
 
-@media (max-width: 480px) {
-  .nav-links a {
-    margin: 0 5px;
-    font-size: 14px;
-  }
-  .section-title {
-    font-size: 28px;
-  }
-  .slide-content h1 {
-    font-size: 24px;
-  }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding-top: 45px;
+    }
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand h2 {
+        font-size: 18px;
+    }
+
+    .footer-map iframe {
+        height: 220px;
+    }
+}
+
 /* About Section */
 .about {
   padding: 40px 20px;
@@ -1083,11 +1176,20 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   z-index: 999;
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: bounceMove 1s infinite; /* 👈 moving effect */
 }
+
 .whatsapp-float:hover {
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 0 20px rgba(37, 211, 102, 0.8);
 }
+
+/* Keyframes for bounce/move */
+@keyframes bounceMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 
 /* ============================= */
 /* Fireworks Animation Canvas */
@@ -1101,5 +1203,5 @@ body {
   height: 100%;
 
   pointer-events: none;
-  z-index: 998;
+  z-index: 999;
 }
