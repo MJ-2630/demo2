@@ -26,6 +26,49 @@ setInterval(() => {
 
 }, 5000);
 
+/* =========================================
+   MOBILE HAMBURGER MENU
+   ========================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+
+  menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    const icon = menuToggle.querySelector("i");
+
+    if (navLinks.classList.contains("active")) {
+      icon.classList.remove("bi-list");
+      icon.classList.add("bi-x-lg");
+    } else {
+      icon.classList.remove("bi-x-lg");
+      icon.classList.add("bi-list");
+    }
+
+  });
+
+
+  // Close menu after clicking a link
+  navLinks.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      navLinks.classList.remove("active");
+
+      const icon = menuToggle.querySelector("i");
+
+      icon.classList.remove("bi-x-lg");
+      icon.classList.add("bi-list");
+
+    });
+
+  });
+
+}
 
 /* =========================================
    CONFETTI ANIMATION
